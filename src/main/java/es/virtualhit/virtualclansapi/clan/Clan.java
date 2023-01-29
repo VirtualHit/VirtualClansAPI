@@ -3,7 +3,6 @@ package es.virtualhit.virtualclansapi.clan;
 import es.virtualhit.virtualclansapi.clan.rank.ClanPermission;
 import es.virtualhit.virtualclansapi.clan.rank.ClanRank;
 import net.william278.huskhomes.position.Position;
-import org.bukkit.block.Banner;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
@@ -29,7 +28,7 @@ public abstract class Clan {
     private Position home;
     private Inventory mailbox;
 
-    // TODO: Quests
+    // TODO: Quests, shop, money, settings
 
     public Clan(UUID uuid, String name, UUID leader) {
         this.uuid = uuid;
