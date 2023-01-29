@@ -2,12 +2,12 @@ package es.virtualhit.virtualclansapi.user;
 
 import java.util.UUID;
 
-public abstract class ClanUser {
+public abstract class User {
 
     private final UUID uuid;
     private UUID clanUUID;
 
-    public ClanUser(UUID uuid) {
+    public User(UUID uuid) {
         this.uuid = uuid;
         this.clanUUID = null;
     }
