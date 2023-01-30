@@ -33,7 +33,7 @@ public abstract class Clan {
     private HashMap<String, ClanSettingStatus> settings;
     private HashMap<String, Object> shopData;
 
-    // TODO: Quests, shop
+    // TODO: Quests
 
     public Clan(UUID uuid, String name, UUID leader) {
         this.uuid = uuid;
@@ -166,6 +166,22 @@ public abstract class Clan {
 
     public void takeBalance(BigDecimal balance) {
         this.balance = this.balance.subtract(balance);
+    }
+
+    public HashMap<String, ClanSettingStatus> getSettings() {
+        return settings;
+    }
+
+    public void setSettings(HashMap<String, ClanSettingStatus> settings) {
+        this.settings = settings;
+    }
+
+    public HashMap<String, Object> getShopData() {
+        return shopData;
+    }
+
+    public void setShopData(HashMap<String, Object> shopData) {
+        this.shopData = shopData;
     }
 
     public abstract int calculateLevel();
