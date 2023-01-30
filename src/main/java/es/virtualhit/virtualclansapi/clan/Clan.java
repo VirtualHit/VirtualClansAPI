@@ -31,8 +31,9 @@ public abstract class Clan {
     private Inventory mailbox;
     private BigDecimal balance;
     private HashMap<String, ClanSettingStatus> settings;
+    private HashMap<String, Object> shopData;
 
-    // TODO: Quests, shop, settings
+    // TODO: Quests, shop
 
     public Clan(UUID uuid, String name, UUID leader) {
         this.uuid = uuid;
@@ -48,6 +49,7 @@ public abstract class Clan {
         this.chests = new HashMap<>();
         this.balance = new BigDecimal(0);
         this.settings = new HashMap<>();
+        this.shopData = new HashMap<>();
     }
 
     public UUID getUuid() {
