@@ -1,5 +1,6 @@
 package es.virtualhit.virtualclansapi.clan.rank;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -14,6 +15,8 @@ public abstract class ClanRank {
     public ClanRank(String name, int weight, boolean nameChangeable, boolean weightChangeable) {
         this.name = name;
         this.weight = weight;
+        this.permissions = new ArrayList<>();
+        this.members = new ArrayList<>();
         this.nameChangeable = nameChangeable;
         this.weightChangeable = weightChangeable;
     }
