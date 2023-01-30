@@ -2,6 +2,7 @@ package es.virtualhit.virtualclansapi.clan;
 
 import es.virtualhit.virtualclansapi.clan.rank.ClanPermission;
 import es.virtualhit.virtualclansapi.clan.rank.ClanRank;
+import es.virtualhit.virtualclansapi.clan.setting.ClanSettingStatus;
 import net.william278.huskhomes.position.Position;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
@@ -29,8 +30,9 @@ public abstract class Clan {
     private Position home;
     private Inventory mailbox;
     private BigDecimal balance;
+    private HashMap<String, ClanSettingStatus> settings;
 
-    // TODO: Quests, shop, money, settings
+    // TODO: Quests, shop, settings
 
     public Clan(UUID uuid, String name, UUID leader) {
         this.uuid = uuid;
@@ -44,6 +46,8 @@ public abstract class Clan {
         this.ranks = new HashMap<>();
         this.allies = new ArrayList<>();
         this.chests = new HashMap<>();
+        this.balance = new BigDecimal(0);
+        this.settings = new HashMap<>();
     }
 
     public UUID getUuid() {
