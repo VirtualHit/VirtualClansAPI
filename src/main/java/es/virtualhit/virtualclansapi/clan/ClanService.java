@@ -11,6 +11,7 @@ public interface ClanService {
     void update(Clan clan, UpdateType updateType);
 
     boolean exists(UUID uuid);
+    boolean exists(String name);
 
     Clan get(UUID uuid);
 
