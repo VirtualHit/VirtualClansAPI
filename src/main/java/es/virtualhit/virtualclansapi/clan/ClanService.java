@@ -10,7 +10,7 @@ public interface ClanService {
     void create(Clan clan);
     void update(Clan clan, UpdateType updateType);
     boolean exists(UUID uuid);
-    User get(UUID uuid);
+    Clan get(UUID uuid);
     void loadToRedis(Clan clan);
     void unloadFromRedis(UUID uuid);
 
