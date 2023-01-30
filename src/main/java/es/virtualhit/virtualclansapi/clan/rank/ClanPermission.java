@@ -17,7 +17,6 @@ public enum ClanPermission {
     CREATE_RANK,
     RENAME_RANK,
     EDIT_RANK,
-    DISBAND_CLAN,
     SET_PLAYER_RANK,
     GO_TO_CLAN_HOME,
     SET_CLAN_HOME,
@@ -31,5 +30,6 @@ public enum ClanPermission {
     REQUEST_REGROUP,
     DONATE,
     SETTINGS_EDIT_FRIENDLY_FIRE,
-    CHANGE_CLAN_BANNER
+    CHANGE_CLAN_BANNER,
+    ALL_PERMISSIONS
 }
