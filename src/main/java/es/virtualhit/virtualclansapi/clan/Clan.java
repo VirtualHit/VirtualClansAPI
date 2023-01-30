@@ -7,6 +7,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -27,6 +28,7 @@ public abstract class Clan {
     private HashMap<Integer, Inventory> chests;
     private Position home;
     private Inventory mailbox;
+    private BigDecimal balance;
 
     // TODO: Quests, shop, money, settings
 
@@ -142,6 +144,22 @@ public abstract class Clan {
 
     public void setMailbox(Inventory mailbox) {
         this.mailbox = mailbox;
+    }
+
+    public BigDecimal getBalance() {
+        return balance;
+    }
+
+    public void setBalance(BigDecimal balance) {
+        this.balance = balance;
+    }
+
+    public void addBalance(BigDecimal balance) {
+        this.balance = this.balance.add(balance);
+    }
+
+    public void takeBalance(BigDecimal balance) {
+        this.balance = this.balance.subtract(balance);
     }
 
     public abstract int calculateLevel();
