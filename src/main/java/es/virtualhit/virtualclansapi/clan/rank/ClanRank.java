@@ -9,16 +9,14 @@ public abstract class ClanRank {
     private int weight;
     private List<ClanPermission> permissions;
     private List<UUID> members;
-    private boolean nameChangeable;
-    private boolean weightChangeable;
+    private final boolean maxRank;
 
-    public ClanRank(String name, int weight, boolean nameChangeable, boolean weightChangeable) {
+    public ClanRank(String name, int weight, boolean maxRank) {
         this.name = name;
         this.weight = weight;
         this.permissions = new ArrayList<>();
         this.members = new ArrayList<>();
-        this.nameChangeable = nameChangeable;
-        this.weightChangeable = weightChangeable;
+        this.maxRank = maxRank;
     }
 
     public String getName() {
@@ -53,19 +51,7 @@ public abstract class ClanRank {
         this.members = members;
     }
 
-    public boolean isNameChangeable() {
-        return nameChangeable;
-    }
-
-    public void setNameChangeable(boolean nameChangeable) {
-        this.nameChangeable = nameChangeable;
-    }
-
-    public boolean isWeightChangeable() {
-        return weightChangeable;
-    }
-
-    public void setWeightChangeable(boolean weightChangeable) {
-        this.weightChangeable = weightChangeable;
+    public boolean isMaxRank() {
+        return maxRank;
     }
 }
