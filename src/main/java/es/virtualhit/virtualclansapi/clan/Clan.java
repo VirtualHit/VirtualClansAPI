@@ -45,7 +45,7 @@ public abstract class Clan {
         this.members = new ArrayList<>();
         this.onlineMembers = new ArrayList<>();
         this.experience = 0;
-        this.level = 0;
+        this.level = 1;
         this.ranks = new HashMap<>();
         this.allies = new ArrayList<>();
         this.chests = new HashMap<>();
