@@ -27,7 +27,7 @@ public abstract class Clan {
     private int level;
     private HashMap<String, ClanRank> ranks;
     private List<UUID> allies;
-    private HashMap<Integer, Inventory> chests;
+    private HashMap<Integer, List<ItemStack>> chests;
     private Position home;
     private List<ItemStack> mailboxItems;
     private BigDecimal balance;
@@ -139,11 +139,11 @@ public abstract class Clan {
         this.allies = allies;
     }
 
-    public HashMap<Integer, Inventory> getChests() {
+    public HashMap<Integer, List<ItemStack>> getChests() {
         return chests;
     }
 
-    public void setChests(HashMap<Integer, Inventory> chests) {
+    public void setChests(HashMap<Integer, List<ItemStack>> chests) {
         this.chests = chests;
     }
 
