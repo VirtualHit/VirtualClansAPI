@@ -29,7 +29,7 @@ public abstract class Clan {
     private List<UUID> allies;
     private HashMap<Integer, Inventory> chests;
     private Position home;
-    private Inventory mailbox;
+    private List<ItemStack> mailboxItems;
     private BigDecimal balance;
     private HashMap<String, ClanSettingStatus> settings;
     private HashMap<String, Object> shopData;
@@ -49,6 +49,7 @@ public abstract class Clan {
         this.ranks = new HashMap<>();
         this.allies = new ArrayList<>();
         this.chests = new HashMap<>();
+        this.mailboxItems = new ArrayList<>();
         this.balance = new BigDecimal(0);
         this.settings = new HashMap<>();
         this.shopData = new HashMap<>();
@@ -154,12 +155,12 @@ public abstract class Clan {
         this.home = home;
     }
 
-    public Inventory getMailbox() {
-        return mailbox;
+    public List<ItemStack> getMailboxItems() {
+        return mailboxItems;
     }
 
-    public void setMailbox(Inventory mailbox) {
-        this.mailbox = mailbox;
+    public void setMailboxItems(List<ItemStack> mailboxItems) {
+        this.mailboxItems = mailboxItems;
     }
 
     public BigDecimal getBalance() {
