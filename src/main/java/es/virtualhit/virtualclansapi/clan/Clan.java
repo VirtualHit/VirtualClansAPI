@@ -200,4 +200,6 @@ public abstract class Clan {
     public abstract boolean hasPermission(UUID member, ClanPermission permission);
     
     public abstract void teleportHome(Player player);
+
+    public abstract ClanRank getRankWithLowerWeight();
 }
