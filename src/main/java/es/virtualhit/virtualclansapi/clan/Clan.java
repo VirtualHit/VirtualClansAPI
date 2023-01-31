@@ -24,6 +24,7 @@ public abstract class Clan {
     private List<UUID> members;
     private List<UUID> onlineMembers;
     private int experience;
+    private int level;
     private HashMap<String, ClanRank> ranks;
     private List<UUID> allies;
     private HashMap<Integer, Inventory> chests;
@@ -110,6 +111,14 @@ public abstract class Clan {
 
     public void setExperience(int experience) {
         this.experience = experience;
+    }
+
+    public int getLevel() {
+        return level;
+    }
+
+    public void setLevel(int level) {
+        this.level = level;
     }
 
     public HashMap<String, ClanRank> getRanks() {
