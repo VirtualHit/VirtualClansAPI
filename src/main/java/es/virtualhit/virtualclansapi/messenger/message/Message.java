@@ -16,6 +16,8 @@ public class Message {
         PLAYER_MESSAGE,
         BROADCAST_MESSAGE,
         DISPLAY_CLAN_MESSAGE,
-        DISPLAY_BROADCAST_MESSAGE
+        DISPLAY_BROADCAST_MESSAGE,
+        CLAN_CHAT_MESSAGE,
+        ALLY_CHAT_MESSAGE
     }
 }
