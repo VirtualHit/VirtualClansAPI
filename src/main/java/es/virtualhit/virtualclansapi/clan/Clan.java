@@ -202,4 +202,6 @@ public abstract class Clan {
     public abstract void teleportHome(Player player);
 
     public abstract ClanRank getRankWithLowerWeight();
+
+    public abstract ClanRank getPlayerRank(UUID member);
 }
