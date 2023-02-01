@@ -1,8 +1,10 @@
 package es.virtualhit.virtualclansapi.clan.rank;
 
 public enum ClanPermission {
-    USE_ALLY_CHAT,
-    USE_CLAN_CHAT,
+    SEND_ALLY_CHAT,
+    SEND_CLAN_CHAT,
+    RECEIVE_ALLY_CHAT,
+    RECEIVE_CLAN_CHAT,
     INVITE_ALLY,
     ACCEPT_ALLY,
     OPEN_CHEST_1,
