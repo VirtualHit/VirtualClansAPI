@@ -7,6 +7,7 @@ import java.util.UUID;
 public interface ClanService {
 
     void create(Clan clan);
+    void delete(UUID uuid);
 
     void update(Clan clan, UpdateType updateType);
 
