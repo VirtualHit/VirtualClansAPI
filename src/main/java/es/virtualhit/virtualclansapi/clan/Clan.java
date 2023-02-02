@@ -5,7 +5,6 @@ import es.virtualhit.virtualclansapi.clan.rank.ClanRank;
 import es.virtualhit.virtualclansapi.clan.setting.ClanSettingStatus;
 import net.william278.huskhomes.position.Position;
 import org.bukkit.entity.Player;
-import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 
 import java.math.BigDecimal;
@@ -18,6 +17,7 @@ public abstract class Clan {
 
     private final UUID uuid;
     private String name;
+    private String displayName;
     private String description;
     private ItemStack banner;
     private UUID leader;
@@ -39,6 +39,7 @@ public abstract class Clan {
     public Clan(UUID uuid, String name, UUID leader) {
         this.uuid = uuid;
         this.name = name;
+        this.displayName = name;
         this.leader = leader;
 
         this.description = "";
@@ -65,6 +66,14 @@ public abstract class Clan {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getDisplayName() {
+        return displayName;
+    }
+
+    public void setDisplayName(String displayName) {
+        this.displayName = displayName;
     }
 
     public String getDescription() {
