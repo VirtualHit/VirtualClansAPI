@@ -10,6 +10,7 @@ es/virtualhit/virtualclansapi/event/ClanDisbandEvent.class
 es/virtualhit/virtualclansapi/clan/rank/ClanRank.class
 es/virtualhit/virtualclansapi/service/UpdateType.class
 es/virtualhit/virtualclansapi/event/PlayerLeaveClanEvent.class
+es/virtualhit/virtualclansapi/event/ClanLevelUpEvent.class
 es/virtualhit/virtualclansapi/clan/Clan.class
 es/virtualhit/virtualclansapi/messenger/message/Message.class
 es/virtualhit/virtualclansapi/clan/rank/ClanPermission.class
