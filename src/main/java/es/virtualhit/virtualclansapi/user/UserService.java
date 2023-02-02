@@ -12,6 +12,7 @@ public interface UserService {
     boolean exists(String name);
     User get(UUID uuid);
     User get(String name);
+    String getName(UUID uuid);
     void loadToRedis(User user);
     void unloadFromRedis(UUID uuid);
 }

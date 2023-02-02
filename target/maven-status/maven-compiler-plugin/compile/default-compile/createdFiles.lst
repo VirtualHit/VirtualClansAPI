@@ -1,4 +1,5 @@
 es/virtualhit/virtualclansapi/event/PlayerJoinClanEvent.class
+es/virtualhit/virtualclansapi/event/PlayerClanKickEvent.class
 es/virtualhit/virtualclansapi/clan/setting/ClanSettingStatus.class
 es/virtualhit/virtualclansapi/messenger/Messenger.class
 es/virtualhit/virtualclansapi/user/chat/ChatStatus.class
