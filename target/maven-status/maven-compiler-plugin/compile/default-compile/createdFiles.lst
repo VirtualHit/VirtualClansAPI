@@ -5,6 +5,7 @@ es/virtualhit/virtualclansapi/clan/setting/ClanSettingStatus.class
 es/virtualhit/virtualclansapi/messenger/Messenger.class
 es/virtualhit/virtualclansapi/clan/regroup/RegroupRequestService.class
 es/virtualhit/virtualclansapi/user/chat/ChatStatus.class
+es/virtualhit/virtualclansapi/event/ClanRegroupRequestCreateEvent.class
 es/virtualhit/virtualclansapi/event/ClanDisbandEvent.class
 es/virtualhit/virtualclansapi/clan/rank/ClanRank.class
 es/virtualhit/virtualclansapi/service/UpdateType.class
