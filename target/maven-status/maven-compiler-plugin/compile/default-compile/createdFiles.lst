@@ -7,8 +7,8 @@ es/virtualhit/virtualclansapi/service/UpdateType.class
 es/virtualhit/virtualclansapi/messenger/message/Message.class
 es/virtualhit/virtualclansapi/clan/ClanService.class
 es/virtualhit/virtualclansapi/invite/Invite.class
-es/virtualhit/virtualclansapi/messenger/message/Message$MessageType.class
 es/virtualhit/virtualclansapi/user/UserService.class
+es/virtualhit/virtualclansapi/messenger/message/Message$MessageType.class
 es/virtualhit/virtualclansapi/user/User.class
 es/virtualhit/virtualclansapi/clan/ally/AllyRequest.class
 es/virtualhit/virtualclansapi/invite/InviteService.class

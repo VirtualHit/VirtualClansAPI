@@ -15,6 +15,7 @@ public interface ClanService {
     boolean exists(String name);
 
     Clan get(UUID uuid);
+    Clan get(String name);
 
     void loadToRedis(Clan clan);
 
