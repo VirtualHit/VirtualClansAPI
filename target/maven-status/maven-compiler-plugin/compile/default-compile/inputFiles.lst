@@ -1,6 +1,7 @@
 /home/alex/Documents/GitHub/VirtualClansAPI/src/main/java/es/virtualhit/virtualclansapi/clan/setting/ClanSettingStatus.java
 /home/alex/Documents/GitHub/VirtualClansAPI/src/main/java/es/virtualhit/virtualclansapi/clan/regroup/RegroupRequestService.java
 /home/alex/Documents/GitHub/VirtualClansAPI/src/main/java/es/virtualhit/virtualclansapi/event/ClanCreateAllyEvent.java
+/home/alex/Documents/GitHub/VirtualClansAPI/src/main/java/es/virtualhit/virtualclansapi/menu/ClanMenu.java
 /home/alex/Documents/GitHub/VirtualClansAPI/src/main/java/es/virtualhit/virtualclansapi/clan/ally/AllyRequest.java
 /home/alex/Documents/GitHub/VirtualClansAPI/src/main/java/es/virtualhit/virtualclansapi/user/UserService.java
 /home/alex/Documents/GitHub/VirtualClansAPI/src/main/java/es/virtualhit/virtualclansapi/invite/InviteService.java
