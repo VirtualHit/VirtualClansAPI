@@ -33,6 +33,8 @@ public abstract class Clan {
     private BigDecimal balance;
     private HashMap<String, ClanSettingStatus> settings;
     private HashMap<String, Object> shopData;
+    private int kills;
+    private int deaths;
 
     // TODO: Quests
 
@@ -54,6 +56,8 @@ public abstract class Clan {
         this.balance = new BigDecimal(0);
         this.settings = new HashMap<>();
         this.shopData = new HashMap<>();
+        this.kills = 0;
+        this.deaths = 0;
     }
 
     public UUID getUuid() {
@@ -202,6 +206,22 @@ public abstract class Clan {
 
     public void setShopData(HashMap<String, Object> shopData) {
         this.shopData = shopData;
+    }
+
+    public int getKills() {
+        return kills;
+    }
+
+    public void setKills(int kills) {
+        this.kills = kills;
+    }
+
+    public int getDeaths() {
+        return deaths;
+    }
+
+    public void setDeaths(int deaths) {
+        this.deaths = deaths;
     }
 
     public abstract int calculateLevel();
