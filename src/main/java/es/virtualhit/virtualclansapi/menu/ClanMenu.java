@@ -5,7 +5,7 @@ import org.bukkit.entity.Player;
 
 public abstract class ClanMenu {
 
-    abstract void open(Player player);
+    public abstract void open(Player player);
 
-    abstract void executeActions(PlayerClickMenuItemEvent event);
+    public abstract void executeActions(PlayerClickMenuItemEvent event);
 }
