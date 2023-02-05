@@ -2,6 +2,7 @@ package es.virtualhit.virtualclansapi.clan;
 
 import es.virtualhit.virtualclansapi.service.UpdateType;
 
+import java.util.List;
 import java.util.UUID;
 
 public interface ClanService {
@@ -22,4 +23,6 @@ public interface ClanService {
     void unloadFromRedis(UUID uuid);
 
     boolean isLoadedInRedis(UUID uuid);
+
+    List<Clan> getByExperience(int from, int to);
 }
