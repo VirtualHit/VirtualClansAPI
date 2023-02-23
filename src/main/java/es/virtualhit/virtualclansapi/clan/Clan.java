@@ -3,10 +3,12 @@ package es.virtualhit.virtualclansapi.clan;
 import es.virtualhit.virtualclansapi.clan.rank.ClanPermission;
 import es.virtualhit.virtualclansapi.clan.rank.ClanRank;
 import es.virtualhit.virtualclansapi.clan.setting.ClanSettingStatus;
+import es.virtualhit.virtualclansapi.serializer.BukkitSerializer;
 import net.william278.huskhomes.position.Position;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
+import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -19,7 +21,7 @@ public abstract class Clan {
     private String name;
     private String displayName;
     private String description;
-    private ItemStack banner;
+    private String banner;
     private UUID leader;
     private List<UUID> members;
     private List<UUID> onlineMembers;
@@ -27,9 +29,9 @@ public abstract class Clan {
     private int level;
     private HashMap<String, ClanRank> ranks;
     private List<UUID> allies;
-    private HashMap<Integer, List<ItemStack>> chests;
+    private HashMap<Integer, String> chests;
     private Position home;
-    private List<ItemStack> mailboxItems;
+    private String mailboxItems;
     private BigDecimal balance;
     private HashMap<String, ClanSettingStatus> settings;
     private HashMap<String, Object> shopData;
@@ -52,7 +54,6 @@ public abstract class Clan {
         this.ranks = new HashMap<>();
         this.allies = new ArrayList<>();
         this.chests = new HashMap<>();
-        this.mailboxItems = new ArrayList<>();
         this.balance = new BigDecimal(0);
         this.settings = new HashMap<>();
         this.shopData = new HashMap<>();
@@ -89,11 +90,11 @@ public abstract class Clan {
     }
 
     public ItemStack getBanner() {
-        return banner;
+        return BukkitSerializer.itemStackFromBase64(banner);
     }
 
     public void setBanner(ItemStack banner) {
-        this.banner = banner;
+        this.banner = BukkitSerializer.itemStackToBase64(banner);
     }
 
     public UUID getLeader() {
@@ -153,11 +154,27 @@ public abstract class Clan {
     }
 
     public HashMap<Integer, List<ItemStack>> getChests() {
-        return chests;
+        try {
+            HashMap<Integer, List<ItemStack>> chests = new HashMap<>();
+            for (String base64 : this.chests.values()) {
+                List<ItemStack> items = new ArrayList<>();
+                for (ItemStack item : BukkitSerializer.itemStackArrayFromBase64(base64)) {
+                    items.add(item);
+                }
+            }
+
+            return chests;
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 
     public void setChests(HashMap<Integer, List<ItemStack>> chests) {
-        this.chests = chests;
+        HashMap<Integer, String> chestsBase64 = new HashMap<>();
+        for (int key : chests.keySet()) {
+            chestsBase64.put(key, BukkitSerializer.itemStackArrayToBase64(chests.get(key).toArray(new ItemStack[0])));
+        }
     }
 
     public Position getHome() {
@@ -169,11 +186,16 @@ public abstract class Clan {
     }
 
     public List<ItemStack> getMailboxItems() {
-        return mailboxItems;
+        try {
+            return List.of(BukkitSerializer.itemStackArrayFromBase64(mailboxItems));
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 
     public void setMailboxItems(List<ItemStack> mailboxItems) {
-        this.mailboxItems = mailboxItems;
+        this.mailboxItems = BukkitSerializer.itemStackArrayToBase64(mailboxItems.toArray(new ItemStack[0]));
     }
 
     public BigDecimal getBalance() {
