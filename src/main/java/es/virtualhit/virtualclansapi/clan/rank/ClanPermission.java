@@ -7,6 +7,7 @@ public enum ClanPermission {
     RECEIVE_CLAN_CHAT,
     INVITE_ALLY,
     ACCEPT_ALLY,
+    REMOVE_ALLY,
     OPEN_CHEST_1,
     OPEN_CHEST_2,
     OPEN_CHEST_3,
