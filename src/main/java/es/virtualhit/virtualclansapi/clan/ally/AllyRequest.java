@@ -2,7 +2,7 @@ package es.virtualhit.virtualclansapi.clan.ally;
 
 import java.util.UUID;
 
-public abstract class AllyRequest {
+public class AllyRequest {
 
     private final String id;
     private final UUID requesterClanUUID;
