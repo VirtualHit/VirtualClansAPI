@@ -10,12 +10,14 @@
 /home/alex/Documents/GitHub/VirtualClansAPI/src/main/java/es/virtualhit/virtualclansapi/clan/rank/ClanPermission.java
 /home/alex/Documents/GitHub/VirtualClansAPI/src/main/java/es/virtualhit/virtualclansapi/event/ClanRequestAllyEvent.java
 /home/alex/Documents/GitHub/VirtualClansAPI/src/main/java/es/virtualhit/virtualclansapi/service/UpdateType.java
+/home/alex/Documents/GitHub/VirtualClansAPI/src/main/java/es/virtualhit/virtualclansapi/clan/setting/ClanSetting.java
 /home/alex/Documents/GitHub/VirtualClansAPI/src/main/java/es/virtualhit/virtualclansapi/event/ClanRegroupRequestCreateEvent.java
 /home/alex/Documents/GitHub/VirtualClansAPI/src/main/java/es/virtualhit/virtualclansapi/user/chat/ChatStatus.java
 /home/alex/Documents/GitHub/VirtualClansAPI/src/main/java/es/virtualhit/virtualclansapi/event/PlayerClanKickEvent.java
 /home/alex/Documents/GitHub/VirtualClansAPI/src/main/java/es/virtualhit/virtualclansapi/user/User.java
 /home/alex/Documents/GitHub/VirtualClansAPI/src/main/java/es/virtualhit/virtualclansapi/clan/ally/AllyRequestService.java
 /home/alex/Documents/GitHub/VirtualClansAPI/src/main/java/es/virtualhit/virtualclansapi/serializer/BukkitSerializer.java
+/home/alex/Documents/GitHub/VirtualClansAPI/src/main/java/es/virtualhit/virtualclansapi/event/ClanRemoveAllyEvent.java
 /home/alex/Documents/GitHub/VirtualClansAPI/src/main/java/es/virtualhit/virtualclansapi/clan/regroup/RegroupRequest.java
 /home/alex/Documents/GitHub/VirtualClansAPI/src/main/java/es/virtualhit/virtualclansapi/event/ClanLevelUpEvent.java
 /home/alex/Documents/GitHub/VirtualClansAPI/src/main/java/es/virtualhit/virtualclansapi/messenger/message/Message.java

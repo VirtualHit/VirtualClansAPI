@@ -2,7 +2,7 @@ package es.virtualhit.virtualclansapi.clan;
 
 import es.virtualhit.virtualclansapi.clan.rank.ClanPermission;
 import es.virtualhit.virtualclansapi.clan.rank.ClanRank;
-import es.virtualhit.virtualclansapi.clan.setting.ClanSettingStatus;
+import es.virtualhit.virtualclansapi.clan.setting.ClanSetting;
 import es.virtualhit.virtualclansapi.serializer.BukkitSerializer;
 import net.william278.huskhomes.position.Position;
 import org.bukkit.entity.Player;
@@ -33,7 +33,7 @@ public abstract class Clan {
     private Position home;
     private String mailboxItems;
     private BigDecimal balance;
-    private HashMap<String, ClanSettingStatus> settings;
+    private HashMap<String, ClanSetting> settings;
     private HashMap<String, Object> shopData;
     private int kills;
     private int deaths;
@@ -214,11 +214,11 @@ public abstract class Clan {
         this.balance = this.balance.subtract(balance);
     }
 
-    public HashMap<String, ClanSettingStatus> getSettings() {
+    public HashMap<String, ClanSetting> getSettings() {
         return settings;
     }
 
-    public void setSettings(HashMap<String, ClanSettingStatus> settings) {
+    public void setSettings(HashMap<String, ClanSetting> settings) {
         this.settings = settings;
     }
 
