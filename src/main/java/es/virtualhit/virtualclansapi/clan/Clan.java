@@ -29,9 +29,10 @@ public abstract class Clan {
     private int level;
     private HashMap<String, ClanRank> ranks;
     private List<UUID> allies;
-    private HashMap<Integer, String> chests;
+    private HashMap<Integer, List<String>> chests;
     private Position home;
-    private String mailboxItems;
+    private List<String> mailboxItems;
+    private UUID playerWithMailboxOpen;
     private BigDecimal balance;
     private HashMap<String, ClanSetting> settings;
     private HashMap<String, Object> shopData;
@@ -54,6 +55,8 @@ public abstract class Clan {
         this.ranks = new HashMap<>();
         this.allies = new ArrayList<>();
         this.chests = new HashMap<>();
+        this.mailboxItems = new ArrayList<>();
+        this.playerWithMailboxOpen = null;
         this.balance = new BigDecimal(0);
         this.settings = new HashMap<>();
         this.shopData = new HashMap<>();
@@ -90,11 +93,11 @@ public abstract class Clan {
     }
 
     public ItemStack getBanner() {
-        return BukkitSerializer.itemStackFromBase64(banner);
+        return BukkitSerializer.fromBase64(banner);
     }
 
     public void setBanner(ItemStack banner) {
-        this.banner = BukkitSerializer.itemStackToBase64(banner);
+        this.banner = BukkitSerializer.toBase64(banner);
     }
 
     public UUID getLeader() {
@@ -154,27 +157,21 @@ public abstract class Clan {
     }
 
     public HashMap<Integer, List<ItemStack>> getChests() {
-        try {
-            HashMap<Integer, List<ItemStack>> chests = new HashMap<>();
-            for (String base64 : this.chests.values()) {
-                List<ItemStack> items = new ArrayList<>();
-                for (ItemStack item : BukkitSerializer.itemStackArrayFromBase64(base64)) {
-                    items.add(item);
-                }
-            }
-
-            return chests;
-        } catch (IOException e) {
-            e.printStackTrace();
-            return null;
+        HashMap<Integer, List<ItemStack>> chests = new HashMap<>();
+        for (int i = 0; i < this.chests.size(); i++) {
+            chests.put(i, BukkitSerializer.fromBase64(this.chests.get(i)));
         }
+
+        return chests;
     }
 
     public void setChests(HashMap<Integer, List<ItemStack>> chests) {
-        HashMap<Integer, String> chestsBase64 = new HashMap<>();
-        for (int key : chests.keySet()) {
-            chestsBase64.put(key, BukkitSerializer.itemStackArrayToBase64(chests.get(key).toArray(new ItemStack[0])));
+        HashMap<Integer, List<String>> chestsSerialized = new HashMap<>();
+        for (int i = 0; i < chests.size(); i++) {
+            chestsSerialized.put(i, BukkitSerializer.toBase64(chests.get(i)));
         }
+
+        this.chests = chestsSerialized;
     }
 
     public Position getHome() {
@@ -186,16 +183,19 @@ public abstract class Clan {
     }
 
     public List<ItemStack> getMailboxItems() {
-        try {
-            return List.of(BukkitSerializer.itemStackArrayFromBase64(mailboxItems));
-        } catch (IOException e) {
-            e.printStackTrace();
-            return null;
-        }
+        return BukkitSerializer.fromBase64(mailboxItems);
     }
 
     public void setMailboxItems(List<ItemStack> mailboxItems) {
-        this.mailboxItems = BukkitSerializer.itemStackArrayToBase64(mailboxItems.toArray(new ItemStack[0]));
+        this.mailboxItems = BukkitSerializer.toBase64(mailboxItems);
+    }
+
+    public UUID getPlayerWithMailboxOpen() {
+        return playerWithMailboxOpen;
+    }
+
+    public void setPlayerWithMailboxOpen(UUID playerWithMailboxOpen) {
+        this.playerWithMailboxOpen = playerWithMailboxOpen;
     }
 
     public BigDecimal getBalance() {
