@@ -1,24 +1,27 @@
 package es.virtualhit.virtualclansapi.clan.chest;
 
-import org.bukkit.inventory.Inventory;
+import es.virtualhit.virtualclansapi.serializer.BukkitSerializer;
+import org.bukkit.inventory.ItemStack;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 public class ClanChest {
 
-    private Inventory inventory;
+    private List<String> items;
     private UUID playerWithChestOpen;
 
-    public ClanChest(Inventory inventory) {
-        this.inventory = inventory;
+    public ClanChest() {
+        this.items = new ArrayList<>();
     }
 
-    public Inventory getInventory() {
-        return inventory;
+    public List<ItemStack> getItems() {
+        return BukkitSerializer.fromBase64(items);
     }
 
-    public void setInventory(Inventory inventory) {
-        this.inventory = inventory;
+    public void setItems(List<ItemStack> items) {
+        this.items = BukkitSerializer.toBase64(items);
     }
 
     public UUID getPlayerWithChestOpen() {
