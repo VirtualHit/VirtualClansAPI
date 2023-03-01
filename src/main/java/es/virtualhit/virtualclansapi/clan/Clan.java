@@ -1,5 +1,6 @@
 package es.virtualhit.virtualclansapi.clan;
 
+import es.virtualhit.virtualclansapi.clan.chest.ClanChest;
 import es.virtualhit.virtualclansapi.clan.rank.ClanPermission;
 import es.virtualhit.virtualclansapi.clan.rank.ClanRank;
 import es.virtualhit.virtualclansapi.clan.setting.ClanSetting;
@@ -8,7 +9,6 @@ import net.william278.huskhomes.position.Position;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
-import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -29,7 +29,7 @@ public abstract class Clan {
     private int level;
     private HashMap<String, ClanRank> ranks;
     private List<UUID> allies;
-    private HashMap<Integer, List<String>> chests;
+    private HashMap<Integer, ClanChest> chests;
     private Position home;
     private List<String> mailboxItems;
     private UUID playerWithMailboxOpen;
@@ -156,22 +156,12 @@ public abstract class Clan {
         this.allies = allies;
     }
 
-    public HashMap<Integer, List<ItemStack>> getChests() {
-        HashMap<Integer, List<ItemStack>> chests = new HashMap<>();
-        for (int i = 0; i < this.chests.size(); i++) {
-            chests.put(i, BukkitSerializer.fromBase64(this.chests.get(i)));
-        }
-
+    public HashMap<Integer, ClanChest> getChests() {
         return chests;
     }
 
-    public void setChests(HashMap<Integer, List<ItemStack>> chests) {
-        HashMap<Integer, List<String>> chestsSerialized = new HashMap<>();
-        for (int i = 0; i < chests.size(); i++) {
-            chestsSerialized.put(i, BukkitSerializer.toBase64(chests.get(i)));
-        }
-
-        this.chests = chestsSerialized;
+    public void setChests(HashMap<Integer, ClanChest> chests) {
+        this.chests = chests;
     }
 
     public Position getHome() {

@@ -28,3 +28,4 @@ es/virtualhit/virtualclansapi/event/ClanLevelUpEvent.class
 es/virtualhit/virtualclansapi/clan/Clan.class
 es/virtualhit/virtualclansapi/clan/rank/ClanPermission.class
 es/virtualhit/virtualclansapi/event/ClanCreateEvent.class
+es/virtualhit/virtualclansapi/clan/chest/ClanChest.class
