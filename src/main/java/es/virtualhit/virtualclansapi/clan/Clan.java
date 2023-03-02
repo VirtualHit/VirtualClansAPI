@@ -4,12 +4,15 @@ import es.virtualhit.virtualclansapi.clan.chest.ClanChest;
 import es.virtualhit.virtualclansapi.clan.rank.ClanPermission;
 import es.virtualhit.virtualclansapi.clan.rank.ClanRank;
 import es.virtualhit.virtualclansapi.clan.setting.ClanSetting;
+import es.virtualhit.virtualclansapi.quest.Quest;
 import es.virtualhit.virtualclansapi.serializer.BukkitSerializer;
 import net.william278.huskhomes.position.Position;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
+import java.time.ZoneOffset;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -38,8 +41,10 @@ public abstract class Clan {
     private HashMap<String, Object> shopData;
     private int kills;
     private int deaths;
-
-    // TODO: Quests
+    private LocalDateTime lastQuestSync;
+    private Quest dailyQuest;
+    private Quest weeklyQuest;
+    private List<Quest> permanentQuests;
 
     public Clan(UUID uuid, String name, UUID leader) {
         this.uuid = uuid;
@@ -62,6 +67,8 @@ public abstract class Clan {
         this.shopData = new HashMap<>();
         this.kills = 0;
         this.deaths = 0;
+        this.lastQuestSync = LocalDateTime.ofEpochSecond(0, 0, ZoneOffset.UTC);
+        this.permanentQuests = new ArrayList<>();
     }
 
     public UUID getUuid() {
@@ -245,4 +252,36 @@ public abstract class Clan {
     public abstract ClanRank getRankWithLowerWeight();
 
     public abstract ClanRank getPlayerRank(UUID member);
+
+    public LocalDateTime getLastQuestSync() {
+        return lastQuestSync;
+    }
+
+    public void setLastQuestSync(LocalDateTime lastQuestSync) {
+        this.lastQuestSync = lastQuestSync;
+    }
+
+    public Quest getDailyQuest() {
+        return dailyQuest;
+    }
+
+    public void setDailyQuest(Quest dailyQuest) {
+        this.dailyQuest = dailyQuest;
+    }
+
+    public Quest getWeeklyQuest() {
+        return weeklyQuest;
+    }
+
+    public void setWeeklyQuest(Quest weeklyQuest) {
+        this.weeklyQuest = weeklyQuest;
+    }
+
+    public List<Quest> getPermanentQuests() {
+        return permanentQuests;
+    }
+
+    public void setPermanentQuests(List<Quest> permanentQuests) {
+        this.permanentQuests = permanentQuests;
+    }
 }
