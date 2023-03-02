@@ -1,5 +1,6 @@
 package es.virtualhit.virtualclansapi.quest;
 
+import es.virtualhit.virtualclansapi.quest.requirement.Requirement;
 import es.virtualhit.virtualclansapi.quest.reward.QuestReward;
 import es.virtualhit.virtualclansapi.quest.type.QuestType;
 
@@ -13,6 +14,7 @@ public class Quest {
     private String description;
     private QuestType type;
     private List<QuestReward> rewards;
+    private List<Requirement> requirements;
 
     public Quest(String id, String name, String description, QuestType type) {
         this.id = id;
@@ -20,6 +22,7 @@ public class Quest {
         this.description = description;
         this.type = type;
         this.rewards = new ArrayList<>();
+        this.requirements = new ArrayList<>();
     }
 
     public String getId() {
@@ -60,5 +63,13 @@ public class Quest {
 
     public void setRewards(List<QuestReward> rewards) {
         this.rewards = rewards;
+    }
+
+    public List<Requirement> getRequirements() {
+        return requirements;
+    }
+
+    public void setRequirements(List<Requirement> requirements) {
+        this.requirements = requirements;
     }
 }

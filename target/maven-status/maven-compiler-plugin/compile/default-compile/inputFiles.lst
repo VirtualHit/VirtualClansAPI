@@ -1,5 +1,7 @@
+/home/alex/Documents/GitHub/VirtualClansAPI/src/main/java/es/virtualhit/virtualclansapi/quest/type/QuestType.java
 /home/alex/Documents/GitHub/VirtualClansAPI/src/main/java/es/virtualhit/virtualclansapi/clan/setting/ClanSettingStatus.java
 /home/alex/Documents/GitHub/VirtualClansAPI/src/main/java/es/virtualhit/virtualclansapi/clan/regroup/RegroupRequestService.java
+/home/alex/Documents/GitHub/VirtualClansAPI/src/main/java/es/virtualhit/virtualclansapi/quest/Quest.java
 /home/alex/Documents/GitHub/VirtualClansAPI/src/main/java/es/virtualhit/virtualclansapi/event/ClanCreateAllyEvent.java
 /home/alex/Documents/GitHub/VirtualClansAPI/src/main/java/es/virtualhit/virtualclansapi/clan/ally/AllyRequest.java
 /home/alex/Documents/GitHub/VirtualClansAPI/src/main/java/es/virtualhit/virtualclansapi/clan/chest/ClanChest.java
@@ -7,6 +9,7 @@
 /home/alex/Documents/GitHub/VirtualClansAPI/src/main/java/es/virtualhit/virtualclansapi/invite/InviteService.java
 /home/alex/Documents/GitHub/VirtualClansAPI/src/main/java/es/virtualhit/virtualclansapi/messenger/Messenger.java
 /home/alex/Documents/GitHub/VirtualClansAPI/src/main/java/es/virtualhit/virtualclansapi/event/ClanDisbandEvent.java
+/home/alex/Documents/GitHub/VirtualClansAPI/src/main/java/es/virtualhit/virtualclansapi/quest/reward/QuestReward.java
 /home/alex/Documents/GitHub/VirtualClansAPI/src/main/java/es/virtualhit/virtualclansapi/clan/ClanService.java
 /home/alex/Documents/GitHub/VirtualClansAPI/src/main/java/es/virtualhit/virtualclansapi/clan/rank/ClanPermission.java
 /home/alex/Documents/GitHub/VirtualClansAPI/src/main/java/es/virtualhit/virtualclansapi/event/ClanRequestAllyEvent.java
@@ -19,6 +22,7 @@
 /home/alex/Documents/GitHub/VirtualClansAPI/src/main/java/es/virtualhit/virtualclansapi/clan/ally/AllyRequestService.java
 /home/alex/Documents/GitHub/VirtualClansAPI/src/main/java/es/virtualhit/virtualclansapi/serializer/BukkitSerializer.java
 /home/alex/Documents/GitHub/VirtualClansAPI/src/main/java/es/virtualhit/virtualclansapi/event/ClanRemoveAllyEvent.java
+/home/alex/Documents/GitHub/VirtualClansAPI/src/main/java/es/virtualhit/virtualclansapi/quest/QuestService.java
 /home/alex/Documents/GitHub/VirtualClansAPI/src/main/java/es/virtualhit/virtualclansapi/clan/regroup/RegroupRequest.java
 /home/alex/Documents/GitHub/VirtualClansAPI/src/main/java/es/virtualhit/virtualclansapi/event/ClanLevelUpEvent.java
 /home/alex/Documents/GitHub/VirtualClansAPI/src/main/java/es/virtualhit/virtualclansapi/messenger/message/Message.java
