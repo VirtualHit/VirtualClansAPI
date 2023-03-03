@@ -7,6 +7,7 @@ es/virtualhit/virtualclansapi/event/ClanRegroupRequestCreateEvent.class
 es/virtualhit/virtualclansapi/clan/rank/ClanRank.class
 es/virtualhit/virtualclansapi/service/UpdateType.class
 es/virtualhit/virtualclansapi/clan/setting/ClanSetting.class
+es/virtualhit/virtualclansapi/event/QuestUpdateEvent.class
 es/virtualhit/virtualclansapi/messenger/message/Message.class
 es/virtualhit/virtualclansapi/clan/ClanService.class
 es/virtualhit/virtualclansapi/quest/QuestService.class
@@ -20,6 +21,7 @@ es/virtualhit/virtualclansapi/invite/InviteService.class
 es/virtualhit/virtualclansapi/event/PlayerClanKickEvent.class
 es/virtualhit/virtualclansapi/event/ClanRemoveAllyEvent.class
 es/virtualhit/virtualclansapi/clan/setting/ClanSettingStatus.class
+es/virtualhit/virtualclansapi/quest/requirement/RequirementType.class
 es/virtualhit/virtualclansapi/messenger/Messenger.class
 es/virtualhit/virtualclansapi/event/ClanRequestAllyEvent.class
 es/virtualhit/virtualclansapi/clan/regroup/RegroupRequestService.class
@@ -31,6 +33,8 @@ es/virtualhit/virtualclansapi/event/PlayerLeaveClanEvent.class
 es/virtualhit/virtualclansapi/event/ClanLevelUpEvent.class
 es/virtualhit/virtualclansapi/clan/Clan.class
 es/virtualhit/virtualclansapi/clan/rank/ClanPermission.class
+es/virtualhit/virtualclansapi/quest/requirement/Requirement.class
 es/virtualhit/virtualclansapi/quest/Quest.class
+es/virtualhit/virtualclansapi/event/ClanCompleteQuestEvent.class
 es/virtualhit/virtualclansapi/event/ClanCreateEvent.class
 es/virtualhit/virtualclansapi/clan/chest/ClanChest.class

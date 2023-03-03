@@ -28,6 +28,7 @@ public abstract class Clan {
     private UUID leader;
     private List<UUID> members;
     private List<UUID> onlineMembers;
+    private LocalDateTime creationDate;
     private int experience;
     private int level;
     private HashMap<String, ClanRank> ranks;
@@ -55,6 +56,7 @@ public abstract class Clan {
         this.description = "";
         this.members = new ArrayList<>();
         this.onlineMembers = new ArrayList<>();
+        this.creationDate = LocalDateTime.now();
         this.experience = 0;
         this.level = 1;
         this.ranks = new HashMap<>();
@@ -129,6 +131,14 @@ public abstract class Clan {
 
     public void setOnlineMembers(List<UUID> onlineMembers) {
         this.onlineMembers = onlineMembers;
+    }
+
+    public LocalDateTime getCreationDate() {
+        return creationDate;
+    }
+
+    public void setCreationDate(LocalDateTime creationDate) {
+        this.creationDate = creationDate;
     }
 
     public int getExperience() {

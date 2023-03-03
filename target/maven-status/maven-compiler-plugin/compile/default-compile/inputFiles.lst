@@ -1,10 +1,12 @@
 /home/alex/Documents/GitHub/VirtualClansAPI/src/main/java/es/virtualhit/virtualclansapi/quest/type/QuestType.java
+/home/alex/Documents/GitHub/VirtualClansAPI/src/main/java/es/virtualhit/virtualclansapi/event/ClanCompleteQuestEvent.java
 /home/alex/Documents/GitHub/VirtualClansAPI/src/main/java/es/virtualhit/virtualclansapi/clan/setting/ClanSettingStatus.java
 /home/alex/Documents/GitHub/VirtualClansAPI/src/main/java/es/virtualhit/virtualclansapi/clan/regroup/RegroupRequestService.java
 /home/alex/Documents/GitHub/VirtualClansAPI/src/main/java/es/virtualhit/virtualclansapi/quest/Quest.java
 /home/alex/Documents/GitHub/VirtualClansAPI/src/main/java/es/virtualhit/virtualclansapi/event/ClanCreateAllyEvent.java
 /home/alex/Documents/GitHub/VirtualClansAPI/src/main/java/es/virtualhit/virtualclansapi/clan/ally/AllyRequest.java
 /home/alex/Documents/GitHub/VirtualClansAPI/src/main/java/es/virtualhit/virtualclansapi/clan/chest/ClanChest.java
+/home/alex/Documents/GitHub/VirtualClansAPI/src/main/java/es/virtualhit/virtualclansapi/event/QuestUpdateEvent.java
 /home/alex/Documents/GitHub/VirtualClansAPI/src/main/java/es/virtualhit/virtualclansapi/user/UserService.java
 /home/alex/Documents/GitHub/VirtualClansAPI/src/main/java/es/virtualhit/virtualclansapi/invite/InviteService.java
 /home/alex/Documents/GitHub/VirtualClansAPI/src/main/java/es/virtualhit/virtualclansapi/messenger/Messenger.java
@@ -13,6 +15,8 @@
 /home/alex/Documents/GitHub/VirtualClansAPI/src/main/java/es/virtualhit/virtualclansapi/clan/ClanService.java
 /home/alex/Documents/GitHub/VirtualClansAPI/src/main/java/es/virtualhit/virtualclansapi/clan/rank/ClanPermission.java
 /home/alex/Documents/GitHub/VirtualClansAPI/src/main/java/es/virtualhit/virtualclansapi/event/ClanRequestAllyEvent.java
+/home/alex/Documents/GitHub/VirtualClansAPI/src/main/java/es/virtualhit/virtualclansapi/quest/requirement/Requirement.java
+/home/alex/Documents/GitHub/VirtualClansAPI/src/main/java/es/virtualhit/virtualclansapi/quest/requirement/RequirementType.java
 /home/alex/Documents/GitHub/VirtualClansAPI/src/main/java/es/virtualhit/virtualclansapi/service/UpdateType.java
 /home/alex/Documents/GitHub/VirtualClansAPI/src/main/java/es/virtualhit/virtualclansapi/clan/setting/ClanSetting.java
 /home/alex/Documents/GitHub/VirtualClansAPI/src/main/java/es/virtualhit/virtualclansapi/event/ClanRegroupRequestCreateEvent.java
