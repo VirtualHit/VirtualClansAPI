@@ -25,6 +25,7 @@
 /home/alex/Documents/GitHub/VirtualClansAPI/src/main/java/es/virtualhit/virtualclansapi/user/User.java
 /home/alex/Documents/GitHub/VirtualClansAPI/src/main/java/es/virtualhit/virtualclansapi/clan/ally/AllyRequestService.java
 /home/alex/Documents/GitHub/VirtualClansAPI/src/main/java/es/virtualhit/virtualclansapi/serializer/BukkitSerializer.java
+/home/alex/Documents/GitHub/VirtualClansAPI/src/main/java/es/virtualhit/virtualclansapi/clan/member/ClanMember.java
 /home/alex/Documents/GitHub/VirtualClansAPI/src/main/java/es/virtualhit/virtualclansapi/event/ClanRemoveAllyEvent.java
 /home/alex/Documents/GitHub/VirtualClansAPI/src/main/java/es/virtualhit/virtualclansapi/quest/QuestService.java
 /home/alex/Documents/GitHub/VirtualClansAPI/src/main/java/es/virtualhit/virtualclansapi/clan/regroup/RegroupRequest.java

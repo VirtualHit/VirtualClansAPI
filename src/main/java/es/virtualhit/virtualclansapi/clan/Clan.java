@@ -1,6 +1,7 @@
 package es.virtualhit.virtualclansapi.clan;
 
 import es.virtualhit.virtualclansapi.clan.chest.ClanChest;
+import es.virtualhit.virtualclansapi.clan.member.ClanMember;
 import es.virtualhit.virtualclansapi.clan.rank.ClanPermission;
 import es.virtualhit.virtualclansapi.clan.rank.ClanRank;
 import es.virtualhit.virtualclansapi.clan.setting.ClanSetting;
@@ -26,9 +27,8 @@ public abstract class Clan {
     private String description;
     private String banner;
     private UUID leader;
-    private List<UUID> members;
-    private List<UUID> onlineMembers;
-    private LocalDateTime creationDate;
+    private HashMap<UUID, ClanMember> members;
+    private final LocalDateTime creationDate;
     private int experience;
     private int level;
     private HashMap<String, ClanRank> ranks;
@@ -54,8 +54,7 @@ public abstract class Clan {
         this.leader = leader;
 
         this.description = "";
-        this.members = new ArrayList<>();
-        this.onlineMembers = new ArrayList<>();
+        this.members = new HashMap<>();
         this.creationDate = LocalDateTime.now();
         this.experience = 0;
         this.level = 1;
@@ -117,28 +116,19 @@ public abstract class Clan {
         this.leader = leader;
     }
 
-    public List<UUID> getMembers() {
+    public HashMap<UUID, ClanMember> getMembers() {
         return members;
     }
 
-    public void setMembers(List<UUID> members) {
+    public void setMembers(HashMap<UUID, ClanMember> members) {
         this.members = members;
     }
-
-    public List<UUID> getOnlineMembers() {
-        return onlineMembers;
-    }
-
-    public void setOnlineMembers(List<UUID> onlineMembers) {
-        this.onlineMembers = onlineMembers;
+    public List<ClanMember> getOnlineMembers() {
+        return members.values().stream().filter(ClanMember::isOnline).toList();
     }
 
     public LocalDateTime getCreationDate() {
         return creationDate;
-    }
-
-    public void setCreationDate(LocalDateTime creationDate) {
-        this.creationDate = creationDate;
     }
 
     public int getExperience() {

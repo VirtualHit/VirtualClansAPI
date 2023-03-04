@@ -8,14 +8,12 @@ public class ClanRank {
     private String name;
     private int weight;
     private List<ClanPermission> permissions;
-    private List<UUID> members;
     private final boolean maxRank;
 
     public ClanRank(String name, int weight, boolean maxRank) {
         this.name = name;
         this.weight = weight;
         this.permissions = new ArrayList<>();
-        this.members = new ArrayList<>();
         this.maxRank = maxRank;
     }
 
@@ -41,14 +39,6 @@ public class ClanRank {
 
     public void setPermissions(List<ClanPermission> permissions) {
         this.permissions = permissions;
-    }
-
-    public List<UUID> getMembers() {
-        return members;
-    }
-
-    public void setMembers(List<UUID> members) {
-        this.members = members;
     }
 
     public boolean isMaxRank() {

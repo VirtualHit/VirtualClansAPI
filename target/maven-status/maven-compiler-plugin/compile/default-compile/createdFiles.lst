@@ -24,6 +24,7 @@ es/virtualhit/virtualclansapi/clan/setting/ClanSettingStatus.class
 es/virtualhit/virtualclansapi/quest/requirement/RequirementType.class
 es/virtualhit/virtualclansapi/messenger/Messenger.class
 es/virtualhit/virtualclansapi/event/ClanRequestAllyEvent.class
+es/virtualhit/virtualclansapi/clan/member/ClanMember.class
 es/virtualhit/virtualclansapi/clan/regroup/RegroupRequestService.class
 es/virtualhit/virtualclansapi/clan/ally/AllyRequestService.class
 es/virtualhit/virtualclansapi/event/ClanDisbandEvent.class
