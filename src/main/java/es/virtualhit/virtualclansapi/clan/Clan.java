@@ -2,6 +2,7 @@ package es.virtualhit.virtualclansapi.clan;
 
 import es.virtualhit.virtualclansapi.clan.chest.ClanChest;
 import es.virtualhit.virtualclansapi.clan.member.ClanMember;
+import es.virtualhit.virtualclansapi.clan.quest.QuestStatus;
 import es.virtualhit.virtualclansapi.clan.rank.ClanPermission;
 import es.virtualhit.virtualclansapi.clan.rank.ClanRank;
 import es.virtualhit.virtualclansapi.clan.setting.ClanSetting;
@@ -40,6 +41,11 @@ public abstract class Clan {
     private HashMap<String, Object> shopData;
     private int kills;
     private int deaths;
+    private String currentQuest;
+    private HashMap<String, Float> currentQuestData;
+    private HashMap<String, QuestStatus> dailyQuests;
+    private HashMap<String, QuestStatus> weeklyQuests;
+    private List<String> completedPermanentQuests;
 
     public Clan(UUID uuid, String name, UUID leader) {
         this.uuid = uuid;
@@ -62,6 +68,12 @@ public abstract class Clan {
         this.shopData = new HashMap<>();
         this.kills = 0;
         this.deaths = 0;
+
+        this.currentQuest = null;
+        this.currentQuestData = new HashMap<>();
+        this.dailyQuests = new HashMap<>();
+        this.weeklyQuests = new HashMap<>();
+        this.completedPermanentQuests = new ArrayList<>();
     }
 
     public UUID getUuid() {
@@ -233,6 +245,46 @@ public abstract class Clan {
 
     public void setDeaths(int deaths) {
         this.deaths = deaths;
+    }
+
+    public String getCurrentQuest() {
+        return currentQuest;
+    }
+
+    public void setCurrentQuest(String currentQuest) {
+        this.currentQuest = currentQuest;
+    }
+
+    public HashMap<String, Float> getCurrentQuestData() {
+        return currentQuestData;
+    }
+
+    public void setCurrentQuestData(HashMap<String, Float> currentQuestData) {
+        this.currentQuestData = currentQuestData;
+    }
+
+    public HashMap<String, QuestStatus> getDailyQuests() {
+        return dailyQuests;
+    }
+
+    public void setDailyQuests(HashMap<String, QuestStatus> dailyQuests) {
+        this.dailyQuests = dailyQuests;
+    }
+
+    public HashMap<String, QuestStatus> getWeeklyQuests() {
+        return weeklyQuests;
+    }
+
+    public void setWeeklyQuests(HashMap<String, QuestStatus> weeklyQuests) {
+        this.weeklyQuests = weeklyQuests;
+    }
+
+    public List<String> getCompletedPermanentQuests() {
+        return completedPermanentQuests;
+    }
+
+    public void setCompletedPermanentQuests(List<String> completedPermanentQuests) {
+        this.completedPermanentQuests = completedPermanentQuests;
     }
 
     public abstract int calculateLevel();
