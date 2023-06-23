@@ -1,6 +1,5 @@
 package es.virtualhit.virtualclansapi.event;
 
-import es.virtualhit.virtualclansapi.quest.type.QuestType;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 import org.jetbrains.annotations.NotNull;
@@ -8,10 +7,10 @@ import org.jetbrains.annotations.NotNull;
 public class QuestUpdateEvent extends Event {
 
     private static final HandlerList HANDLERS = new HandlerList();
-    private QuestType questType;
+    private UpdateType updateType;
 
-    public QuestUpdateEvent(QuestType questType) {
-        this.questType = questType;
+    public QuestUpdateEvent(UpdateType updateType) {
+        this.updateType = updateType;
     }
 
     @Override
@@ -21,5 +20,10 @@ public class QuestUpdateEvent extends Event {
 
     public static HandlerList getHandlerList() {
         return HANDLERS;
+    }
+
+    public enum UpdateType {
+        DAILY,
+        WEEKLY
     }
 }
