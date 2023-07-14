@@ -7,7 +7,6 @@ es\virtualhit\virtualclansapi\event\ClanCreateAllyEvent.class
 es\virtualhit\virtualclansapi\event\ClanRequestAllyEvent.class
 es\virtualhit\virtualclansapi\user\chat\ChatStatus.class
 es\virtualhit\virtualclansapi\clan\chest\ClanChest.class
-es\virtualhit\virtualclansapi\clan\position\Server.class
 es\virtualhit\virtualclansapi\clan\member\ClanMember.class
 es\virtualhit\virtualclansapi\clan\rank\ClanPermission.class
 es\virtualhit\virtualclansapi\invite\InviteService.class
