@@ -1,6 +1,6 @@
 package es.virtualhit.virtualclansapi.clan.regroup;
 
-import net.william278.huskhomes.position.Position;
+import es.virtualhit.virtualclansapi.clan.position.Position;
 
 import java.util.UUID;
 

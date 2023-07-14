@@ -7,6 +7,7 @@ es\virtualhit\virtualclansapi\event\ClanCreateAllyEvent.class
 es\virtualhit\virtualclansapi\event\ClanRequestAllyEvent.class
 es\virtualhit\virtualclansapi\user\chat\ChatStatus.class
 es\virtualhit\virtualclansapi\clan\chest\ClanChest.class
+es\virtualhit\virtualclansapi\clan\position\Server.class
 es\virtualhit\virtualclansapi\clan\member\ClanMember.class
 es\virtualhit\virtualclansapi\clan\rank\ClanPermission.class
 es\virtualhit\virtualclansapi\invite\InviteService.class
@@ -16,6 +17,7 @@ es\virtualhit\virtualclansapi\event\QuestUpdateEvent$UpdateType.class
 es\virtualhit\virtualclansapi\clan\ally\AllyRequestService.class
 es\virtualhit\virtualclansapi\event\ClanCreateEvent.class
 es\virtualhit\virtualclansapi\messenger\message\Message.class
+es\virtualhit\virtualclansapi\clan\position\Position.class
 es\virtualhit\virtualclansapi\clan\rank\ClanRank.class
 es\virtualhit\virtualclansapi\event\ClanRemoveAllyEvent.class
 es\virtualhit\virtualclansapi\event\PlayerClanKickEvent.class
@@ -23,13 +25,16 @@ es\virtualhit\virtualclansapi\event\PlayerLeaveClanEvent.class
 es\virtualhit\virtualclansapi\messenger\message\Message$MessageType.class
 es\virtualhit\virtualclansapi\event\ClanDisbandEvent.class
 es\virtualhit\virtualclansapi\user\User.class
+es\virtualhit\virtualclansapi\clan\position\Location.class
 es\virtualhit\virtualclansapi\clan\regroup\RegroupRequest.class
 es\virtualhit\virtualclansapi\invite\Invite.class
 es\virtualhit\virtualclansapi\clan\quest\QuestStatus.class
 es\virtualhit\virtualclansapi\event\ClanLevelUpEvent.class
 es\virtualhit\virtualclansapi\clan\setting\ClanSettingStatus.class
+es\virtualhit\virtualclansapi\clan\position\World.class
 es\virtualhit\virtualclansapi\event\QuestUpdateEvent.class
 es\virtualhit\virtualclansapi\clan\ClanService.class
 es\virtualhit\virtualclansapi\messenger\Messenger.class
+es\virtualhit\virtualclansapi\clan\position\World$Environment.class
 es\virtualhit\virtualclansapi\clan\setting\ClanSetting.class
 es\virtualhit\virtualclansapi\event\ClanRegroupRequestCreateEvent.class

@@ -2,12 +2,12 @@ package es.virtualhit.virtualclansapi.clan;
 
 import es.virtualhit.virtualclansapi.clan.chest.ClanChest;
 import es.virtualhit.virtualclansapi.clan.member.ClanMember;
+import es.virtualhit.virtualclansapi.clan.position.Position;
 import es.virtualhit.virtualclansapi.clan.quest.QuestStatus;
 import es.virtualhit.virtualclansapi.clan.rank.ClanPermission;
 import es.virtualhit.virtualclansapi.clan.rank.ClanRank;
 import es.virtualhit.virtualclansapi.clan.setting.ClanSetting;
 import es.virtualhit.virtualclansapi.serializer.BukkitSerializer;
-import net.william278.huskhomes.position.Position;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 

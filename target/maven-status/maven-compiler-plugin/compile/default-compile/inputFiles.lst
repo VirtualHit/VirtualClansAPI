@@ -5,12 +5,14 @@ C:\Users\alexc\Documents\GitHub\VirtualClansAPI\src\main\java\es\virtualhit\virt
 C:\Users\alexc\Documents\GitHub\VirtualClansAPI\src\main\java\es\virtualhit\virtualclansapi\event\ClanRemoveAllyEvent.java
 C:\Users\alexc\Documents\GitHub\VirtualClansAPI\src\main\java\es\virtualhit\virtualclansapi\event\ClanCreateEvent.java
 C:\Users\alexc\Documents\GitHub\VirtualClansAPI\src\main\java\es\virtualhit\virtualclansapi\user\chat\ChatStatus.java
+C:\Users\alexc\Documents\GitHub\VirtualClansAPI\src\main\java\es\virtualhit\virtualclansapi\clan\position\Location.java
 C:\Users\alexc\Documents\GitHub\VirtualClansAPI\src\main\java\es\virtualhit\virtualclansapi\invite\Invite.java
 C:\Users\alexc\Documents\GitHub\VirtualClansAPI\src\main\java\es\virtualhit\virtualclansapi\serializer\BukkitSerializer.java
 C:\Users\alexc\Documents\GitHub\VirtualClansAPI\src\main\java\es\virtualhit\virtualclansapi\event\QuestUpdateEvent.java
 C:\Users\alexc\Documents\GitHub\VirtualClansAPI\src\main\java\es\virtualhit\virtualclansapi\event\ClanDisbandEvent.java
 C:\Users\alexc\Documents\GitHub\VirtualClansAPI\src\main\java\es\virtualhit\virtualclansapi\event\ClanRequestAllyEvent.java
 C:\Users\alexc\Documents\GitHub\VirtualClansAPI\src\main\java\es\virtualhit\virtualclansapi\clan\chest\ClanChest.java
+C:\Users\alexc\Documents\GitHub\VirtualClansAPI\src\main\java\es\virtualhit\virtualclansapi\clan\position\World.java
 C:\Users\alexc\Documents\GitHub\VirtualClansAPI\src\main\java\es\virtualhit\virtualclansapi\messenger\Messenger.java
 C:\Users\alexc\Documents\GitHub\VirtualClansAPI\src\main\java\es\virtualhit\virtualclansapi\service\UpdateType.java
 C:\Users\alexc\Documents\GitHub\VirtualClansAPI\src\main\java\es\virtualhit\virtualclansapi\event\PlayerLeaveClanEvent.java
@@ -26,8 +28,10 @@ C:\Users\alexc\Documents\GitHub\VirtualClansAPI\src\main\java\es\virtualhit\virt
 C:\Users\alexc\Documents\GitHub\VirtualClansAPI\src\main\java\es\virtualhit\virtualclansapi\clan\regroup\RegroupRequestService.java
 C:\Users\alexc\Documents\GitHub\VirtualClansAPI\src\main\java\es\virtualhit\virtualclansapi\clan\regroup\RegroupRequest.java
 C:\Users\alexc\Documents\GitHub\VirtualClansAPI\src\main\java\es\virtualhit\virtualclansapi\clan\rank\ClanRank.java
+C:\Users\alexc\Documents\GitHub\VirtualClansAPI\src\main\java\es\virtualhit\virtualclansapi\clan\position\Server.java
 C:\Users\alexc\Documents\GitHub\VirtualClansAPI\src\main\java\es\virtualhit\virtualclansapi\clan\quest\QuestStatus.java
 C:\Users\alexc\Documents\GitHub\VirtualClansAPI\src\main\java\es\virtualhit\virtualclansapi\clan\Clan.java
 C:\Users\alexc\Documents\GitHub\VirtualClansAPI\src\main\java\es\virtualhit\virtualclansapi\event\PlayerClanKickEvent.java
 C:\Users\alexc\Documents\GitHub\VirtualClansAPI\src\main\java\es\virtualhit\virtualclansapi\clan\member\ClanMember.java
+C:\Users\alexc\Documents\GitHub\VirtualClansAPI\src\main\java\es\virtualhit\virtualclansapi\clan\position\Position.java
 C:\Users\alexc\Documents\GitHub\VirtualClansAPI\src\main\java\es\virtualhit\virtualclansapi\event\ClanCreateAllyEvent.java
