@@ -2,6 +2,8 @@ package es.virtualhit.virtualclansapi.clan;
 
 import es.virtualhit.virtualclansapi.clan.chest.ClanChest;
 import es.virtualhit.virtualclansapi.clan.member.ClanMember;
+import es.virtualhit.virtualclansapi.clan.quest.Quest;
+import es.virtualhit.virtualclansapi.clan.quest.QuestID;
 import es.virtualhit.virtualclansapi.clan.rank.ClanPermission;
 import es.virtualhit.virtualclansapi.clan.rank.ClanRank;
 import es.virtualhit.virtualclansapi.clan.setting.ClanSetting;
@@ -12,7 +14,6 @@ import org.bukkit.inventory.ItemStack;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
-import java.time.ZoneOffset;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -41,7 +42,11 @@ public abstract class Clan {
     private HashMap<String, Object> shopData;
     private int kills;
     private int deaths;
-    private LocalDateTime lastQuestSync;
+    private UUID questWeekID;
+    private Quest selectedQuest;
+    private List<QuestID> availableWeeklyQuests;
+    private List<QuestID> completedWeeklyQuests;
+    private List<QuestID> completedPermanentQuests;
 
     public Clan(UUID uuid, String name, UUID leader) {
         this.uuid = uuid;
@@ -64,7 +69,10 @@ public abstract class Clan {
         this.shopData = new HashMap<>();
         this.kills = 0;
         this.deaths = 0;
-        this.lastQuestSync = LocalDateTime.ofEpochSecond(0, 0, ZoneOffset.UTC);
+
+        this.availableWeeklyQuests = new ArrayList<>();
+        this.completedWeeklyQuests = new ArrayList<>();
+        this.completedPermanentQuests = new ArrayList<>();
     }
 
     public UUID getUuid() {
@@ -248,11 +256,43 @@ public abstract class Clan {
 
     public abstract ClanRank getPlayerRank(UUID member);
 
-    public LocalDateTime getLastQuestSync() {
-        return lastQuestSync;
+    public UUID getQuestWeekID() {
+        return questWeekID;
     }
 
-    public void setLastQuestSync(LocalDateTime lastQuestSync) {
-        this.lastQuestSync = lastQuestSync;
+    public void setQuestWeekID(UUID questWeekID) {
+        this.questWeekID = questWeekID;
+    }
+
+    public Quest getSelectedQuest() {
+        return selectedQuest;
+    }
+
+    public void setSelectedQuest(Quest selectedQuest) {
+        this.selectedQuest = selectedQuest;
+    }
+
+    public List<QuestID> getAvailableWeeklyQuests() {
+        return availableWeeklyQuests;
+    }
+
+    public void setAvailableWeeklyQuests(List<QuestID> availableWeeklyQuests) {
+        this.availableWeeklyQuests = availableWeeklyQuests;
+    }
+
+    public List<QuestID> getCompletedWeeklyQuests() {
+        return completedWeeklyQuests;
+    }
+
+    public void setCompletedWeeklyQuests(List<QuestID> completedWeeklyQuests) {
+        this.completedWeeklyQuests = completedWeeklyQuests;
+    }
+
+    public List<QuestID> getCompletedPermanentQuests() {
+        return completedPermanentQuests;
+    }
+
+    public void setCompletedPermanentQuests(List<QuestID> completedPermanentQuests) {
+        this.completedPermanentQuests = completedPermanentQuests;
     }
 }
