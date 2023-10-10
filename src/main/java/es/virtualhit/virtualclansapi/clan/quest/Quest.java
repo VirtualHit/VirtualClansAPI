@@ -7,17 +7,27 @@ import java.util.List;
 public class Quest {
 
     private final QuestID id;
+    private String name;
     private List<QuestRequirement> requirements;
     private boolean completed;
 
-    public Quest(QuestID id, List<QuestRequirement> requirements) {
+    public Quest(QuestID id, String name, List<QuestRequirement> requirements) {
         this.id = id;
+        this.name = name;
         this.requirements = requirements;
         this.completed = false;
     }
 
     public QuestID getId() {
         return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public List<QuestRequirement> getRequirements() {
