@@ -5,7 +5,6 @@ import es.virtualhit.virtualclansapi.clan.member.ClanMember;
 import es.virtualhit.virtualclansapi.clan.rank.ClanPermission;
 import es.virtualhit.virtualclansapi.clan.rank.ClanRank;
 import es.virtualhit.virtualclansapi.clan.setting.ClanSetting;
-import es.virtualhit.virtualclansapi.quest.Quest;
 import es.virtualhit.virtualclansapi.serializer.BukkitSerializer;
 import net.william278.huskhomes.position.Position;
 import org.bukkit.entity.Player;
