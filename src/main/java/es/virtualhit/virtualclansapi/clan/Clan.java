@@ -43,9 +43,6 @@ public abstract class Clan {
     private int kills;
     private int deaths;
     private LocalDateTime lastQuestSync;
-    private Quest dailyQuest;
-    private Quest weeklyQuest;
-    private List<Quest> permanentQuests;
 
     public Clan(UUID uuid, String name, UUID leader) {
         this.uuid = uuid;
@@ -69,7 +66,6 @@ public abstract class Clan {
         this.kills = 0;
         this.deaths = 0;
         this.lastQuestSync = LocalDateTime.ofEpochSecond(0, 0, ZoneOffset.UTC);
-        this.permanentQuests = new ArrayList<>();
     }
 
     public UUID getUuid() {
@@ -259,29 +255,5 @@ public abstract class Clan {
 
     public void setLastQuestSync(LocalDateTime lastQuestSync) {
         this.lastQuestSync = lastQuestSync;
-    }
-
-    public Quest getDailyQuest() {
-        return dailyQuest;
-    }
-
-    public void setDailyQuest(Quest dailyQuest) {
-        this.dailyQuest = dailyQuest;
-    }
-
-    public Quest getWeeklyQuest() {
-        return weeklyQuest;
-    }
-
-    public void setWeeklyQuest(Quest weeklyQuest) {
-        this.weeklyQuest = weeklyQuest;
-    }
-
-    public List<Quest> getPermanentQuests() {
-        return permanentQuests;
-    }
-
-    public void setPermanentQuests(List<Quest> permanentQuests) {
-        this.permanentQuests = permanentQuests;
     }
 }
