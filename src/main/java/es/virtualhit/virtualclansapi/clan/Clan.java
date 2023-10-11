@@ -295,4 +295,11 @@ public abstract class Clan {
     public void setCompletedPermanentQuests(List<QuestID> completedPermanentQuests) {
         this.completedPermanentQuests = completedPermanentQuests;
     }
+
+    public void resetWeeklyQuests(UUID currentWeekID, List<QuestID> weeklyQuests) {
+        setQuestWeekID(currentWeekID);
+        setSelectedQuest(null);
+        setAvailableWeeklyQuests(weeklyQuests);
+        setCompletedWeeklyQuests(new ArrayList<>());
+    }
 }
