@@ -4,6 +4,7 @@ import es.virtualhit.virtualclansapi.clan.chest.ClanChest;
 import es.virtualhit.virtualclansapi.clan.member.ClanMember;
 import es.virtualhit.virtualclansapi.clan.quest.Quest;
 import es.virtualhit.virtualclansapi.clan.quest.QuestID;
+import es.virtualhit.virtualclansapi.clan.quest.QuestType;
 import es.virtualhit.virtualclansapi.clan.rank.ClanPermission;
 import es.virtualhit.virtualclansapi.clan.rank.ClanRank;
 import es.virtualhit.virtualclansapi.clan.setting.ClanSetting;
@@ -14,10 +15,7 @@ import org.bukkit.inventory.ItemStack;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.UUID;
+import java.util.*;
 
 public abstract class Clan {
 
@@ -44,7 +42,7 @@ public abstract class Clan {
     private int deaths;
     private UUID questWeekID;
     private Quest selectedQuest;
-    private List<QuestID> availableWeeklyQuests;
+    private Set<QuestID> availableWeeklyQuests;
     private List<QuestID> completedWeeklyQuests;
     private List<QuestID> completedPermanentQuests;
 
@@ -70,7 +68,7 @@ public abstract class Clan {
         this.kills = 0;
         this.deaths = 0;
 
-        this.availableWeeklyQuests = new ArrayList<>();
+        this.availableWeeklyQuests = new HashSet<>();
         this.completedWeeklyQuests = new ArrayList<>();
         this.completedPermanentQuests = new ArrayList<>();
     }
@@ -272,11 +270,11 @@ public abstract class Clan {
         this.selectedQuest = selectedQuest;
     }
 
-    public List<QuestID> getAvailableWeeklyQuests() {
+    public Set<QuestID> getAvailableWeeklyQuests() {
         return availableWeeklyQuests;
     }
 
-    public void setAvailableWeeklyQuests(List<QuestID> availableWeeklyQuests) {
+    public void setAvailableWeeklyQuests(Set<QuestID> availableWeeklyQuests) {
         this.availableWeeklyQuests = availableWeeklyQuests;
     }
 
@@ -296,10 +294,21 @@ public abstract class Clan {
         this.completedPermanentQuests = completedPermanentQuests;
     }
 
-    public void resetWeeklyQuests(UUID currentWeekID, List<QuestID> weeklyQuests) {
+    public void resetWeeklyQuests(UUID currentWeekID, int weeklyQuests, Set<String> weeklySections) {
+        Set<QuestID> selectedQuests = new HashSet<>();
+        for (int i = 0; i < weeklyQuests; i++) {
+            String section = weeklySections.stream().skip(new Random().nextInt(weeklySections.size())).findFirst().orElse(null);
+            QuestID questID = new QuestID(QuestType.WEEKLY, section);
+            selectedQuests.add(questID);
+        }
+
         setQuestWeekID(currentWeekID);
-        setSelectedQuest(null);
-        setAvailableWeeklyQuests(weeklyQuests);
+
+        if (getSelectedQuest().getId().getType() == QuestType.WEEKLY) {
+            selectedQuests.add(getSelectedQuest().getId());
+        }
+
+        setAvailableWeeklyQuests(selectedQuests);
         setCompletedWeeklyQuests(new ArrayList<>());
     }
 }
