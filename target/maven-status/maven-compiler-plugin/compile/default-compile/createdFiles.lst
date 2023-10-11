@@ -15,6 +15,7 @@ es\virtualhit\virtualclansapi\invite\InviteService.class
 es\virtualhit\virtualclansapi\serializer\BukkitSerializer.class
 es\virtualhit\virtualclansapi\service\UpdateType.class
 es\virtualhit\virtualclansapi\clan\ally\AllyRequestService.class
+es\virtualhit\virtualclansapi\server\Server.class
 es\virtualhit\virtualclansapi\event\ClanCreateEvent.class
 es\virtualhit\virtualclansapi\messenger\message\Message.class
 es\virtualhit\virtualclansapi\clan\rank\ClanRank.class

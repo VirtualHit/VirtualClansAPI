@@ -18,6 +18,7 @@ public class Message {
         DISPLAY_CLAN_MESSAGE,
         DISPLAY_BROADCAST_MESSAGE,
         CLAN_CHAT_MESSAGE,
-        ALLY_CHAT_MESSAGE
+        ALLY_CHAT_MESSAGE,
+        WEEK_RESET
     }
 }
