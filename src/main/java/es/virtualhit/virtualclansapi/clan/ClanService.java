@@ -25,4 +25,6 @@ public interface ClanService {
     boolean isLoadedInRedis(UUID uuid);
 
     List<Clan> getByExperience(int from, int to);
+
+    List<Clan> getAllFromRedis();
 }
