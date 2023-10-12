@@ -37,9 +37,9 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>net.william278</groupId>
-            <artifactId>HuskHomes2</artifactId>
-            <version>3.2.1</version>
+            <groupId>es.virtualhit</groupId>
+            <artifactId>VirtualTeleportAPI</artifactId>
+            <version>1.0-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
