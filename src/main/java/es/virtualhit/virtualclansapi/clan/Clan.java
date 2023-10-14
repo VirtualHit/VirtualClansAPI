@@ -296,7 +296,8 @@ public abstract class Clan {
 
     public void resetWeeklyQuests(UUID currentWeekID, int weeklyQuests, Set<String> weeklySections) {
         Set<QuestID> selectedQuests = new HashSet<>();
-        for (int i = 0; i < weeklyQuests; i++) {
+        while (selectedQuests.size() == weeklyQuests) {
+            System.out.println("while " + selectedQuests.size());
             String section = weeklySections.stream().skip(new Random().nextInt(weeklySections.size())).findFirst().orElse(null);
             QuestID questID = new QuestID(QuestType.WEEKLY, section);
             selectedQuests.add(questID);
@@ -304,7 +305,7 @@ public abstract class Clan {
 
         setQuestWeekID(currentWeekID);
 
-        if (getSelectedQuest().getId().getType() == QuestType.WEEKLY) {
+        if (getSelectedQuest() == null || getSelectedQuest().getId().getType() == QuestType.WEEKLY) {
             selectedQuests.add(getSelectedQuest().getId());
         }
 
