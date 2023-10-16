@@ -6,10 +6,10 @@ public class QuestRequirement {
 
     private final QuestRequirementType type;
     private final double requiredAmount;
-    private final HashMap<String, String> data;
+    private final HashMap<String, Object> data;
     private double currentAmount;
 
-    public QuestRequirement(QuestRequirementType type, double requiredAmount, HashMap<String, String> data) {
+    public QuestRequirement(QuestRequirementType type, double requiredAmount, HashMap<String, Object> data) {
         this.type = type;
         this.requiredAmount = requiredAmount;
         this.currentAmount = 0;
@@ -36,7 +36,7 @@ public class QuestRequirement {
         return currentAmount >= requiredAmount;
     }
 
-    public HashMap<String, String> getData() {
+    public HashMap<String, Object> getData() {
         return data;
     }
 }
