@@ -9,13 +9,11 @@ public class Quest {
     private final QuestID id;
     private String name;
     private List<QuestRequirement> requirements;
-    private boolean completed;
 
     public Quest(QuestID id, String name, List<QuestRequirement> requirements) {
         this.id = id;
         this.name = name;
         this.requirements = requirements;
-        this.completed = false;
     }
 
     public QuestID getId() {
@@ -39,11 +37,8 @@ public class Quest {
     }
 
     public boolean isCompleted() {
-        return completed;
-    }
-
-    public void setCompleted(boolean completed) {
-        this.completed = completed;
+        // TODO: Calculate if the quest is completed
+        return false;
     }
 
     public boolean requirementsCompleted() {
