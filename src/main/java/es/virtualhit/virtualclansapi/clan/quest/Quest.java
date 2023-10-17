@@ -37,14 +37,10 @@ public class Quest {
     }
 
     public boolean isCompleted() {
-        // TODO: Calculate if the quest is completed
-        return false;
-    }
-
-    public boolean requirementsCompleted() {
         for (QuestRequirement requirement : requirements) {
             if (!requirement.isCompleted()) return false;
         }
+
         return true;
     }
 }
