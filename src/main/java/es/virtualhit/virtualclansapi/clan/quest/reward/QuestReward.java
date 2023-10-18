@@ -3,6 +3,8 @@ package es.virtualhit.virtualclansapi.clan.quest.reward;
 import es.virtualhit.virtualclansapi.clan.Clan;
 import org.bukkit.inventory.ItemStack;
 
+import java.util.List;
+
 public class QuestReward {
 
     private final String ID;
@@ -44,7 +46,11 @@ public class QuestReward {
     public void giveReward(Clan clan) {
         switch (type) {
             case CLAN_EXPERIENCE -> clan.setExperience(clan.getExperience() + experienceAmount);
-            case ITEM -> clan.getMailboxItems().add(item);
+            case ITEM -> {
+                List<ItemStack> mailboxItems = clan.getMailboxItems();
+                mailboxItems.add(item);
+                clan.setMailboxItems(mailboxItems);
+            }
         }
     }
 
