@@ -39,4 +39,8 @@ public class QuestRequirement {
     public HashMap<String, Object> getData() {
         return data;
     }
+
+    public double getPercentageCompleted() {
+        return currentAmount * 100 / requiredAmount;
+    }
 }
