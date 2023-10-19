@@ -43,4 +43,13 @@ public class Quest {
 
         return true;
     }
+
+    public double getPercentageCompleted() {
+        double completed = 0;
+        for (QuestRequirement requirement : requirements) {
+            completed += requirement.getPercentageCompleted();
+        }
+
+        return completed / requirements.size();
+    }
 }
