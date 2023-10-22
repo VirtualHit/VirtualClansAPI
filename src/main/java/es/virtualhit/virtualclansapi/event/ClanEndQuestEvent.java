@@ -14,8 +14,8 @@ public class ClanEndQuestEvent extends PlayerEvent {
     private final QuestID questID;
     private final QuestEndReason reason;
 
-    public ClanEndQuestEvent(@NotNull Player who, @NotNull Clan clan, @NotNull QuestID questID, @NotNull QuestEndReason reason) {
-        super(who);
+    public ClanEndQuestEvent(boolean async, @NotNull Player who, @NotNull Clan clan, @NotNull QuestID questID, @NotNull QuestEndReason reason) {
+        super(who, async);
         this.clan = clan;
         this.questID = questID;
         this.reason = reason;

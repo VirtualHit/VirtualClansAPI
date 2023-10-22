@@ -11,8 +11,8 @@ public class ClanStartQuestEvent extends PlayerEvent {
     private static final HandlerList HANDLERS = new HandlerList();
     private final Clan clan;
 
-    public ClanStartQuestEvent(@NotNull Player who, @NotNull Clan clan) {
-        super(who);
+    public ClanStartQuestEvent(boolean async, @NotNull Player who, @NotNull Clan clan) {
+        super(who, async);
         this.clan = clan;
     }
 
